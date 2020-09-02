@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
 
-(async () => {
+async function run() {
   try {
     const token = process.env["GITHUB_TOKEN"];
 
@@ -47,4 +47,6 @@ const github = require("@actions/github");
   } catch (error) {
     core.setFailed(error.message);
   }
-})();
+}
+
+run();

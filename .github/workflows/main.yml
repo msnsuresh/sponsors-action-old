@@ -12,6 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Sponsors actions step
-        uses: msnsuresh/sponsors-action@v1.0.3 # Uses an action in the root directory
+        uses: msnsuresh/sponsors-action@v1.0.4 # Uses an action in the root directory
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
