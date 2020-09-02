@@ -2,15 +2,15 @@ on:
   push:
     paths:
       - "**/sponsors.json"
-  jobs:
-    sponsors-job:
-      runs-on: ubuntu-latest
-      name: Adding list of sponsors to the README.md file
-      steps:
-        # To use this repository's private action,
-        # you must check out the repository
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: Sponsors actions step
-          uses: ./ # Uses an action in the root directory
-          id: sponsorsjob
+jobs:
+  sponsors-job:
+    runs-on: ubuntu-latest
+    name: Adding list of sponsors to the README.md file
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Sponsors actions step
+        uses: ./ # Uses an action in the root directory
+        id: sponsorsjob
