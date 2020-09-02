@@ -1,0 +1,5 @@
+name: "Sponsor Action"
+description: "Automatically generate your sponsor list"
+runs:
+  using: "node12"
+  main: "index.js"
