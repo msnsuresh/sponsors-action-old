@@ -1,7 +1,4 @@
-on:
-  push:
-    paths:
-      - "**/sponsors.json"
+on: push
 jobs:
   sponsors-job:
     runs-on: ubuntu-latest
