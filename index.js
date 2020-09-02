@@ -9,6 +9,8 @@ const github = require("@actions/github");
       throw "Token not found";
     }
 
+    console.log("token ", token);
+
     const octokit = new github.GitHub(token);
     const nwo = process.env["GITHUB_REPOSITORY"] || "/";
     const [owner, repo] = nwo.split("/");
@@ -25,7 +27,7 @@ const github = require("@actions/github");
       return;
     }
 
-    console.log(readme);
+    console.log("readme ", readme);
 
     const sponsors_list = await octokit.request(
       `GET /repos/${owner}/${repo}/sponsors`,
@@ -41,7 +43,7 @@ const github = require("@actions/github");
       return;
     }
 
-    console.log(sponsors_list);
+    console.log("sponsors_list ", sponsors_list);
   } catch (error) {
     core.setFailed(error.message);
   }
